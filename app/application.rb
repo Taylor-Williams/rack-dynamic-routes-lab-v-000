@@ -1,5 +1,5 @@
 class Application
-
+  require_relative './item.rb'
   @@items = []
 
   def call(env)
