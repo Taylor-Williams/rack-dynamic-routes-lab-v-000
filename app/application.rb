@@ -9,6 +9,7 @@ class Application
     if req.path =~ /items/
       item = @@items.each.detect{|i|i.name = req.path.split("items")[1]}
       if item
+        req.status = 200
         return item.price
       else
         resp.write "i do not have that item"
