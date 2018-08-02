@@ -6,6 +6,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path =~ /items/
+      puts req.path
       item = @@items.detect{|i|i.name = req.path.split("items/")[1]}
       puts item
       if item
