@@ -13,6 +13,7 @@ class Application
       else
         resp.write "i do not have that item"
         req.status = 400
+      end
     else
       resp.write "page not found"
       req.status = 404
