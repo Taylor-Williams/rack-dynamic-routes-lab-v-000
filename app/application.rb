@@ -7,6 +7,7 @@ class Application
 
     if req.path =~ /items/
       item = @@items.detect{|i|i.name = req.path.split("items/")[1]}
+      puts item
       if item
         resp.write "#{item.price}"
       else
