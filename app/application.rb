@@ -15,7 +15,7 @@ class Application
         req.status = 400
       end
     else
-      resp.write "page not found"
+      resp.write "Route not found"
       req.status = 404
     end
     resp.finish
