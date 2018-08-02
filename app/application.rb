@@ -5,7 +5,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path =~ "/items/"
+    if req.path =~ /items/
       item = @@items.each.detect{|i|i.name = req.path.split("items/")[1]}
       if item
         resp.write "#{item.price}"
