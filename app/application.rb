@@ -7,7 +7,7 @@ class Application
 
     if req.path =~ /items/
       puts req.path.split("items/")[1]
-      puts items
+      puts @@items
       item = @@items.detect{|i|i.name = req.path.split("items/")[1]}
       puts item.name
       if item
